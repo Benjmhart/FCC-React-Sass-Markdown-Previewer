@@ -1,11 +1,30 @@
+$border-color: #4286f4;
+$padding-amt: 20px;
+
+@mixin border {
+  border-color: $border-color;
+  border-width: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: $padding-amt;
+}
+
+@mixin sizing {
+  background: white;
+  width: 40vw;
+  height: 70vh;
+  padding: $padding-amt;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
 .App {
   text-align: center;
 }
 
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: $border-color;
   padding: 20px;
   color: white;
 }
@@ -14,11 +33,28 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.container{
+  margin-top: 4vh;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.md-input{
+  @include sizing;
+  @include border;
+}
+
+.md-output{
+  @include sizing;
+  @include border;
+  text-align: left;
+}
+
+.button{
+  background-color: white;
+  @include border;
+  padding: 10px;
+  margin-top: 5px;
 }

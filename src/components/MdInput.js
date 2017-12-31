@@ -11,11 +11,12 @@ class MdInput extends Component  {
 	}
 	render() {
 		return (<textarea ref={ (textarea)=> this.text = textarea } 
-		className="md-input" onChange={this.presto} ></textarea>);
+		className="md-input" value={this.props.content.join('\n')} onChange={this.presto} ></textarea>);
 	}
 }
 
 MdInput.propTypes = {
+	content: PropTypes.array.isRequired, 
 	chango: PropTypes.func.isRequired
 }
 export default MdInput;

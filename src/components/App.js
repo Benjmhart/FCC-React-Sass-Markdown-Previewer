@@ -29,10 +29,12 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">freeCodeCamp Markdown Previewer</h1>
         </header>
-        <button onClick={this.reset} >reset</button>
-        <MdInput chango={this.chango} />
+        <button className="button" onClick={this.reset} >reset</button>
+        <div className='container'>
+          <MdInput content={this.state.contents} chango={this.chango} />
+          <MdOutput values={this.state.contents}/>
+        </div>
 
-        <MdOutput values={this.state.contents}/>
       </div>
     );
   }
