@@ -41,7 +41,8 @@
   border-radius: 10px;
   border-style: solid;
   padding: 20px;
-  text-align: left; }
+  text-align: left;
+  overflow: scroll; }
 
 .button {
   background-color: white;

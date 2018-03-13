@@ -50,6 +50,7 @@ $padding-amt: 20px;
   @include sizing;
   @include border;
   text-align: left;
+  overflow:scroll;
 }
 
 .button{
